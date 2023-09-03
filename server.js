@@ -68,13 +68,13 @@ io.on("connection", (socket) => {
     // console.log("user left the room" + room)
   })
 
-  socket.on("typing", (room) => {
-    socket.in(room).emit("typing");
-  });
+  // socket.on("typing", (room) => {
+  //   socket.in(room).emit("typing");
+  // });
 
-  socket.on("stoppedTyping", (room) => {
-    socket.in(room).emit("stoppedTyping");
-  });
+  // socket.on("stoppedTyping", (room) => {
+  //   socket.in(room).emit("stoppedTyping");
+  // });
 
   socket.on("new message", (newMessageRecieved) => {
     let chat = newMessageRecieved.chat;
